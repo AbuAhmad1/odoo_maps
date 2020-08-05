@@ -1,0 +1,32 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="maps_test_list">
+      <field name="name">web_google_maps_zoal list</field>
+      <field name="model">maps.test.model</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="maps_test_form">
+      <field name="name">map test form</field>
+      <field name="model">maps.test.model</field>
+      <field name="arch" type="xml">
+        <form>
+          <field name="name" widget="map-char"/>
+        </form>
+      </field>
+    </record>
+   
+    <record model="ir.actions.act_window" id="test_action">
+      <field name="name">Test Window</field>
+      <field name="res_model">maps.test.model</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Test Menu" id="menu_root" action="test_action"/>
+  </data>
+</odoo>
