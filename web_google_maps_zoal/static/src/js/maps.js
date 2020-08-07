@@ -12,7 +12,7 @@ var MapChar = AbstractField.extend({
     },
     initializeMap(){
         console.log('we are in the beam');
-        this.mode = 'google';
+        this.mode = 'leaflet';
         if(this.mode == 'google'){
             this.initializeGoogle();
         }else{
@@ -34,8 +34,8 @@ var MapChar = AbstractField.extend({
           this.map = new google.maps.Map(this.el, mapOptions);
     },
     initializeLeaflet(){
-        // let khartoum = [32.504161, 15.621031];
-        let khartoum = [33.59231524593432, 6.769981384277345];
+        let khartoum = [32.504161, 15.621031];
+        // let khartoum = [33.59231524593432, 6.769981384277345];
         this.map = L.map(this.el).setView(khartoum, 13);
         let width = this.$el.width()
         let height = this.$el.height()
@@ -46,7 +46,7 @@ var MapChar = AbstractField.extend({
             maxZoom: 18,
             id: 'mapbox/streets-v11',
             tileSize: tileSize,
-            zoomOffset: -1,
+            zoomOffset: 1,
             accessToken: 'pk.eyJ1IjoidWJheS1hYmRlbGdhZGlyIiwiYSI6ImNqeXZuZnVjcTBlc2ozaXJyaGw1NWt5cGkifQ.QN_JvTCCKwteXQCRY6ybvQ'
         }).addTo(this.map);
         var marker = L.marker(khartoum).addTo(this.map);
