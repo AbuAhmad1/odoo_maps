@@ -9,4 +9,4 @@ only show the field as a map inside a form, still there is not marker features.
 
 screenshot:
 
-![GitHub Logo](/images/screenshot.png)
+![Screenshot](/images/screenshot.png)
