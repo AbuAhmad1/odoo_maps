@@ -9,4 +9,4 @@ only show the field as a map inside a form, still there is not marker features.
 
 screenshot:
 
-![Screenshot](/images/screenshot.png)
+![Screenshot](web_google_maps_zoal/images/screenshot.png)
